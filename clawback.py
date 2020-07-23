@@ -28,26 +28,16 @@ def assetRevocation(amount, target_account):
         index=asset_id,
         revocation_target=target_account
     )
-    jointSig = jointAuthorization()[1]
+    join_Sig = jointAuthorization()[1]
 
     # Effect clawback by complete approval from required accounts
-    jointTrxn = transaction.MultisigTransaction(txn, jointSig)
-    jointSig.sign(account_sk[0])  # Required account 1 signs the transaction
-    jointSig.sign(account_sk[1])  # Required account 2 signs the transaction
-    jointSig.sign(account_sk[2])  # Required account 3 signs the transaction
+    jointTrxn = transaction.MultisigTransaction(txn, join_Sig)
+    jointTrxn.sign(account_sk[0])  # Required account 1 signs the transaction
+    jointTrxn.sign(account_sk[1])  # Required account 2 signs the transaction
+    jointTrxn.sign(account_sk[2])  # Required account 3 signs the transaction
 
     # Submit transaction to the network
-    txid = algo_client.send_transaction(jointTrxn, headers={'content-type': 'application/x-binary'})
-
-    # Effect clawback by complete approval from required accounts
-    jointSig.sign(account_sk[0])  # Required account 1 signs the transaction
-    jointSig.sign(account_sk[1])  # Required account 2 signs the transaction
-    jointSig.sign(account_sk[2])  # Required account 3 signs the transaction
-    jointSig.sign(account_sk[3])  # Required account 4 signs the transaction
-    jointSig = transaction.MultisigTransaction
-
-    # Submit transaction to the network
-    tx_id = algo_client.send_transaction(jointSig, headers={'content-type': 'application/x-binary'})
+    tx_id = algo_client.send_transaction(jointTrxn, headers={'content-type': 'application/x-binary'})
     message = "Transaction was signed with: {}.".format(tx_id)
     wait = wait_for_confirmation(tx_id)
     time.sleep(2)

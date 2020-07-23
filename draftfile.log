@@ -148,4 +148,137 @@ Holdings: {
     "is-frozen": false
 }
 
-WPFWHLPNY6HLTDGSMMC7O3LTWHEEFS234KN2AML6KXKWXUQSMNZSK5C6VU
+/////////////////////////////////////////////////////////////////////////////
+
+INFO:root:..@dev Accounts in ISA.. 
+account1_pk: NHEML642TY3HDM3GS2IVJJJQ4ATD5RUF5SW5LCROFTVWRBMTUJZFCT6MGE
+account2_pk: TMKWZ63E5DH2JY4GIMZF6SQNXVHT75WM7UR72KGXD3JHFEZMN6ZXVLDDIM
+account3_pk: OBDPTQDJX56N5L7W7LUDF5TSYKSFOWTIXMLESLGVHAJY74PJRPVEHV4GPEaccount4_pk: BLULTMZXFUDPF3MNHYPVR5UPPAEIOXBBUYC4IDDSNKG5SZ52YHMCTDE7A4
+
+INFO:root:..@dev created multi-Signature accounts.. 
+Operation: jointAuthorization
+Joint Address: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+Addresses supplied: ['NHEML642TY3HDM3GS2IVJJJQ4ATD5RUF5SW5LCROFTVWRBMTUJZFCT6MGE', 'TMKWZ63E5DH2JY4GIMZF6SQNXVHT75WM7UR72KGXD3JHFEZMN6ZXVLDDIM', 'OBDPTQDJX56N5L7W7LUDF5TSYKSFOWTIXMLESLGVHAJY74PJRPVEHV4GPE']
+
+INFO:root:..@dev Generate Authorization Accounts.. 
+Operation: generateAuthorizationAccounts
+Joint Address: {'Manage': 'NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ', 'Reserve': 'NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ', 'Freezer': 'NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ', 'Revocation': 'NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ', 'Trxn_executor': 'NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ'}
+
+INFO:root:..@dev created multi-Signature accounts.. 
+Operation: Role-based Accounts
+asset_manage_authorized: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+asset_reserve_based: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+asset_freeze_authorized: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+asset_revocation_authorized: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+Transaction_executor: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+
+INFO:root:..@dev created multi-Signature accounts.. 
+Operation: jointAuthorization
+Joint Address: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+Addresses supplied: ['NHEML642TY3HDM3GS2IVJJJQ4ATD5RUF5SW5LCROFTVWRBMTUJZFCT6MGE', 'TMKWZ63E5DH2JY4GIMZF6SQNXVHT75WM7UR72KGXD3JHFEZMN6ZXVLDDIM', 'OBDPTQDJX56N5L7W7LUDF5TSYKSFOWTIXMLESLGVHAJY74PJRPVEHV4GPE']
+
+INFO:root:..@dev wait for confirmation.. 
+Status: {'catchpoint': '', 'catchpoint-acquired-blocks': 0, 'catchpoint-processed-accounts': 0, 'catchpoint-total-accounts': 0, 'catchpoint-total-blocks': 0, 'catchup-time': 0, 'last-catchpoint': '8160000#BGBB74BK2KR2YVDPRE5LFHFZ5W2HJBLRAHTCBRO2ZM4KRJHYB65Q', 'last-round': 8165494, 'last-version': 'https://github.com/algorandfoundation/specs/tree/e5f565421d720c6f75cdd186f7098495caf9101f', 'next-version': 'https://github.com/algorandfoundation/specs/tree/e5f565421d720c6f75cdd186f7098495caf9101f', 'next-version-round': 8165495, 'next-version-supported': True, 'stopped-at-unsupported-round': False, 'time-since-last-round': 11714882}
+Transaction 5USTEE6ODY2QP7PALJTA6G3EHJ3JWJYKBWGW67LELKSAAJIUM6CA confirmed in round 8165494
+Txn Info: {'confirmed-round': 8165494, 'pool-error': '', 'txn': {'msig': {'subsig': [{'pk': 'acjF+5qeNnGzZpaRVKUw4CY+xoXsrdWKLizraIWTonI=', 's': 'byQQPDvMNXqYMsaWTYRq6l3RoFnsyXBVpPQ2ps7dr38BizcDhWYoq8no7VgTfWJkAJoxn6uW64P1LM7zShiBDw=='}, {'pk': 'mxVs+2Toz6TjhkMyX0oNvU8/9sz9I/0o1x7ScpMsb7M=', 's': 'ktj01KoLP5YzS1KfCkuy8EeBLN7N8z6qF6zgbScitvqyMgS4MuXq7JsrgJA/aoOhXYiNZuWeNfvTSyvM9UOfBg=='}, {'pk': 'cEb5wGm/fN6v9vroMvZywqRXWmi7Fkks1TgTj/Hpi+o=', 's': 'vS8W0DNlhi1pDaYFgO9Z5XOdGLzwLEAhVOi5a+m6gGSH+R5kYJ1cBtNiC/kTi///Qq+durTyvQu6CNjQOMZUDg=='}], 'thr': 3, 'v': 1}, 'txn': {'aamt': 200000, 'arcv': 'WPFWHLPNY6HLTDGSMMC7O3LTWHEEFS234KN2AML6KXKWXUQSMNZSK5C6VU', 'fee': 1000, 'fv': 8165492, 'gen': 'testnet-v1.0', 'gh': 'SGO1GKSzyE7IEPItTxCByw9x8FmnrCDexi9/cOUJOiI=', 'lv': 8166492, 'snd': 'NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ', 'type': 'axfer', 'xaid': 10684835}}}
+Response: Waiting for confirmation...
+INFO:root:...##Asset holding... 
+Address: WPFWHLPNY6HLTDGSMMC7O3LTWHEEFS234KN2AML6KXKWXUQSMNZSK5C6VU.
+ Asset ID: 10684835
+Data in Json: {
+    "amount": 400000,
+    "asset-id": 10684835,
+    "creator": "NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ",
+    "is-frozen": false
+}
+Operation: print_asset_holding
+
+INFO:root:...##Asset Transfer... 
+Receiving account: WPFWHLPNY6HLTDGSMMC7O3LTWHEEFS234KN2AML6KXKWXUQSMNZSK5C6VU.
+Message: Transaction was signed with: 5USTEE6ODY2QP7PALJTA6G3EHJ3JWJYKBWGW67LELKSAAJIUM6CA.
+Operation: transferISA
+Holdings: {
+    "amount": 400000,
+    "asset-id": 10684835,
+    "creator": "NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ",
+    "is-frozen": false
+}
+///////////////////////////////////////////////////////////////////////
+
+
+INFO:root:..@dev Accounts in ISA.. 
+account1_pk: NHEML642TY3HDM3GS2IVJJJQ4ATD5RUF5SW5LCROFTVWRBMTUJZFCT6MGE
+account2_pk: TMKWZ63E5DH2JY4GIMZF6SQNXVHT75WM7UR72KGXD3JHFEZMN6ZXVLDDIM
+account3_pk: OBDPTQDJX56N5L7W7LUDF5TSYKSFOWTIXMLESLGVHAJY74PJRPVEHV4GPEaccount4_pk: BLULTMZXFUDPF3MNHYPVR5UPPAEIOXBBUYC4IDDSNKG5SZ52YHMCTDE7A4
+
+INFO:root:..@dev created multi-Signature accounts.. 
+Operation: jointAuthorization
+Joint Address: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+Addresses supplied: ['NHEML642TY3HDM3GS2IVJJJQ4ATD5RUF5SW5LCROFTVWRBMTUJZFCT6MGE', 'TMKWZ63E5DH2JY4GIMZF6SQNXVHT75WM7UR72KGXD3JHFEZMN6ZXVLDDIM', 'OBDPTQDJX56N5L7W7LUDF5TSYKSFOWTIXMLESLGVHAJY74PJRPVEHV4GPE']
+
+INFO:root:..@dev Generate Authorization Accounts.. 
+Operation: generateAuthorizationAccounts
+Joint Address: {'Manage': 'NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ', 'Reserve': 'NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ', 'Freezer': 'NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ', 'Revocation': 'NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ', 'Trxn_executor': 'NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ'}
+
+INFO:root:..@dev created multi-Signature accounts.. 
+Operation: Role-based Accounts
+asset_manage_authorized: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+asset_reserve_based: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+asset_freeze_authorized: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+asset_revocation_authorized: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+Transaction_executor: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+
+INFO:root:..@dev created multi-Signature accounts.. 
+Operation: jointAuthorization
+Joint Address: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ
+Addresses supplied: ['NHEML642TY3HDM3GS2IVJJJQ4ATD5RUF5SW5LCROFTVWRBMTUJZFCT6MGE', 'TMKWZ63E5DH2JY4GIMZF6SQNXVHT75WM7UR72KGXD3JHFEZMN6ZXVLDDIM', 'OBDPTQDJX56N5L7W7LUDF5TSYKSFOWTIXMLESLGVHAJY74PJRPVEHV4GPE']
+
+INFO:root:..@dev wait for confirmation.. 
+Status: {'catchpoint': '', 'catchpoint-acquired-blocks': 0, 'catchpoint-processed-accounts': 0, 'catchpoint-total-accounts': 0, 'catchpoint-total-blocks': 0, 'catchup-time': 0, 'last-catchpoint': '8160000#BGBB74BK2KR2YVDPRE5LFHFZ5W2HJBLRAHTCBRO2ZM4KRJHYB65Q', 'last-round': 8165526, 'last-version': 'https://github.com/algorandfoundation/specs/tree/e5f565421d720c6f75cdd186f7098495caf9101f', 'next-version': 'https://github.com/algorandfoundation/specs/tree/e5f565421d720c6f75cdd186f7098495caf9101f', 'next-version-round': 8165527, 'next-version-supported': True, 'stopped-at-unsupported-round': False, 'time-since-last-round': 2918131}
+Transaction OFLADRJJ2USBSOYYDU6HKNYPNQLBCOBDGJOATFX5TVNHPJLQK56A confirmed in round 8165526
+Txn Info: {'confirmed-round': 8165526, 'pool-error': '', 'txn': {'msig': {'subsig': [{'pk': 'acjF+5qeNnGzZpaRVKUw4CY+xoXsrdWKLizraIWTonI=', 's': 'gS5eYmBe0c6hNw/7dnDaJcGquSzV7tIvj0wpCQ5ckubTUFEnexaEDOzShFBfb8LWg+MCX0F6n68o8FjPbA8kAw=='}, {'pk': 'mxVs+2Toz6TjhkMyX0oNvU8/9sz9I/0o1x7ScpMsb7M=', 's': '1HVEV1tnUfYeATvlVjyWVJ0Zg96TZaG8LCAeSuU8CUTDhVPCadwq+8iFtE32qMI4nzY/abWpiBEL6oLNhOUdAA=='}, {'pk': 'cEb5wGm/fN6v9vroMvZywqRXWmi7Fkks1TgTj/Hpi+o=', 's': 'vfSCw6OdLdRYF5G2PMMgMn58/NOsXeXOTumbwMwfV5HqAdKGcfqfNBpQLRBCtibjjvTsfa6clEmLDGPA5/ZxDg=='}], 'thr': 3, 'v': 1}, 'txn': {'aamt': 50000, 'arcv': 'WPFWHLPNY6HLTDGSMMC7O3LTWHEEFS234KN2AML6KXKWXUQSMNZSK5C6VU', 'fee': 1000, 'fv': 8165524, 'gen': 'testnet-v1.0', 'gh': 'SGO1GKSzyE7IEPItTxCByw9x8FmnrCDexi9/cOUJOiI=', 'lv': 8166524, 'snd': 'NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ', 'type': 'axfer', 'xaid': 10684835}}}
+Response: Waiting for confirmation...
+INFO:root:...##Asset holding... 
+Address: WPFWHLPNY6HLTDGSMMC7O3LTWHEEFS234KN2AML6KXKWXUQSMNZSK5C6VU.
+ Asset ID: 10684835
+Data in Json: {
+    "amount": 450000,
+    "asset-id": 10684835,
+    "creator": "NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ",
+    "is-frozen": false
+}
+Operation: print_asset_holding
+
+INFO:root:...##Asset Transfer... 
+Receiving account: WPFWHLPNY6HLTDGSMMC7O3LTWHEEFS234KN2AML6KXKWXUQSMNZSK5C6VU.
+Message: Transaction was signed with: OFLADRJJ2USBSOYYDU6HKNYPNQLBCOBDGJOATFX5TVNHPJLQK56A.
+Operation: transferISA
+Holdings: {
+    "amount": 450000,
+    "asset-id": 10684835,
+    "creator": "NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ",
+    "is-frozen": false
+}
+
+INFO:root:...##Asset holding... 
+Address: WPFWHLPNY6HLTDGSMMC7O3LTWHEEFS234KN2AML6KXKWXUQSMNZSK5C6VU.
+ Asset ID: 10684835
+Data in Json: {
+    "amount": 450000,
+    "asset-id": 10684835,
+    "creator": "NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ",
+    "is-frozen": false
+}
+Operation: print_asset_holding
+
+INFO:root:...##Asset holding... 
+Address: NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ.
+ Asset ID: 10684835
+Data in Json: {
+    "amount": 69550000,
+    "asset-id": 10684835,
+    "creator": "NFZ3L6E4MLIOQ5RWYYRJLHCELIA4Q2HA2U654DTKHMBCUQASCDVLLBEXAQ",
+    "is-frozen": false
+}
+Operation: print_asset_holding
+
