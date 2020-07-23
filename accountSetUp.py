@@ -37,7 +37,7 @@ logging.info(
                 account4_pk
             ))
 
-# Secret keys
+# Secret keys (For demonstration purpose only)
 account_sk = [
     accounts['account1_sk'][0],
     accounts['account2_sk'][0],

@@ -1,6 +1,7 @@
 from algosdk.future.transaction import AssetConfigTxn, AssetTransferTxn, account
 from getAssetId import getAssetIdv2
 from connection import algo_client, params
+from algosdk import mnemonic
 from waitForConfirmation import wait_for_confirmation
 import time
 from printAssetHolding import print_asset_holding
@@ -33,7 +34,7 @@ def create_ISA():
         clawback=asset_revocation_authorized,
         url="http//algorand.com/asa/",
         strict_empty_address_check=True,  # Setting this to true prevents accidental removal of admin access to asset or deleting the asset
-        decimals=18
+        decimals=0
     )
 
     _join_Sig = jointAuthorization()
@@ -87,23 +88,24 @@ def create_ISA():
 class LeafBanks:
     def __init__(self, bankName, *others):
         self.bankName = bankName
+        self.leafList = [].append(self.bankName)
         self.others = others
-        self.refNumber = ["GT-13004"]
         pass
 
 
 # Modelling Leaf Banks to opting for Bankers' asset
 class Bankers(LeafBanks):
-    def __init__(self, clearance, bankName, *others):
+    def __init__(self, bankName, *others):
         super().__init__(bankName, *others)
         self.accruals = "debt"
         self.members = []
         self.resolved = []
         self.hasResolve = False
-        self.clearance = clearance
+        self.refNumber = ["GT-13004"]
+        self.clearance = None
 
     # Member Banks to opt in for Bankers' asset
-    def resolve(self, bankrIdentifier, seed):
+    def resolve(self, bankrIdentifier, skey):
         # Check if Leafbank holding Bankers' asset prior to opt-in
         assetId = getAssetIdv2(transaction_executor)
         account_info_pk = algo_client.account_info(bankrIdentifier)
@@ -141,6 +143,7 @@ class Bankers(LeafBanks):
             hasOptedIn = bool(wait is not None)
             if hasOptedIn:
                 self.hasResolve = True
+                print(assetId)
             # Now check the asset holding for that account.
             # This should now show a holding with 0 balance.
             assetHolding = print_asset_holding(bankrIdentifier, assetId)
@@ -156,30 +159,33 @@ class Bankers(LeafBanks):
     # User is required to create account First to proceed further
     def generateBankerAddr(self, ref_number):
         if ref_number in self.refNumber:
-            [sk, accountIdentifier] = account.generate_account()
+            sk, accountIdentifier = account.generate_account()
             seedPhrase = mnemonic.from_private_key(sk)
             self.members.append(accountIdentifier)  # Remembers bankers identifier
-            return seedPhrase, accountIdentifier
+            return (seedPhrase, accountIdentifier)
         else:
             print("You're not recognized")
 
     # On compliance with certain rules, a leaf bank is opted in
-    def canResolve(self, account_id, refNumber, sk):
+    def canResolve(self, account_id, refNumber, name, sk):
         accountid = bool(account_id in self.members)
         while accountid:
-            if self.clearance == 'cleared' and (refNumber in self.members and refNumber not in self.resolved):
-                self.accruals = ""
-                g = Bankers
-                g.resolve(account_id, sk)
-                self.hasResolve = True
-                self.resolved.append(refNumber)
-                print("Resolved\nPlease proceed to the next action.")
-            break
+            if account_id in self.members:
+                self.clearance = 'cleared'
+                if (self.clearance is not None) and (account_id in self.members) and (refNumber not in self.resolved):
+                    self.accruals = None
+                    g = Bankers(name)
+                    g.resolve(account_id, sk)
+                    self.hasResolve = True
+                    self.resolved.append(refNumber)
+                    print("Resolved\nPlease proceed to the next action.")
+                break
 
 
-i = Bankers("GTB", "GT-13004", "NA")
-[seed, pk] = i.generateBankerAddr("GT-13004")  # Get mnemonics and public key
+i = Bankers("Guarantee Trust Bank", "Lagos", "Marina", "Nigeria")
+seed, pk = i.generateBankerAddr("GT-13004")  # Get mnemonics and public key
 print(seed, pk)
 
-time.sleep(50)  # Time to fund account leaf bank for transaction fee
-i.canResolve(seed, "GT-13004", pk)
+time.sleep(50)  # Wait time to fund account leaf bank for transaction fee
+i.canResolve(pk, "GT-13004", "Guarantee Trust Bank", seed)
+
